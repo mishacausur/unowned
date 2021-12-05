@@ -3,7 +3,7 @@
 //  unowned
 //
 //  Created by Misha Causur on 19.11.2021.
-//
+// swiftlint:disable all
 
 import UIKit
 

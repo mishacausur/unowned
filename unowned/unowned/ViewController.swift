@@ -4,16 +4,19 @@
 //
 //  Created by Misha Causur on 19.11.2021.
 //
-
+// swiftlint:disable all
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private var categories = SupportCategories()
     
     @IBOutlet weak var supportCategoriesCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         supportCategoriesCollectionView.register(UINib(nibName: "SupportCategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "SupportCategoriesCollectionViewCell")
+//        navigationController?.navigationBar.titleTextAttributes = [.font: UIFont(name: "OfficinaSansExtraBold", size: 21)]
     }
     
     @IBAction func closeApp(_ sender: Any) {
@@ -26,12 +29,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     var widthCell: CGFloat { return (view.frame.width - (9 * 3)) / 2 }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Categories.categories.count
+        return categories.categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = supportCategoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "SupportCategoriesCollectionViewCell", for: indexPath) as! SupportCategoriesCollectionViewCell
-        cell.configureView(Categories.categories[indexPath.item])
+        cell.configureView(categories.categories[indexPath.item])
         return cell
     }
     
@@ -44,3 +47,4 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     }
     
 }
+

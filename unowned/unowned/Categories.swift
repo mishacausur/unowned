@@ -11,6 +11,13 @@ import UIKit
 struct Categories {
     let icon: UIImage
     let label: String
-    
-    static let categories: [Categories] = [Categories(icon: UIImage(named: "childIcon")!, label: "Дети"), Categories(icon: UIImage(named: "adultIcon")!, label: "Взрослые"), Categories(icon: UIImage(named: "agedIcon")!, label: "Пожилые"), Categories(icon: UIImage(named: "animalsIcon")!, label: "Животные"), Categories(icon: UIImage(named: "eventsIcon")!, label: "Мероприятия")]
+}
+
+struct SupportCategories {
+    let child = Categories(icon: UIImage(named: "childIcon")!, label: "Дети")
+    let adult = Categories(icon: UIImage(named: "adultIcon")!, label: "Взрослые")
+    let aged = Categories(icon: UIImage(named: "agedIcon")!, label: "Пожилые")
+    let animals = Categories(icon: UIImage(named: "animalsIcon")!, label: "Животные")
+    let events = Categories(icon: UIImage(named: "eventsIcon")!, label: "Мероприятия")
+    lazy var categories: [Categories] = [child, adult, aged, animals, events]
 }

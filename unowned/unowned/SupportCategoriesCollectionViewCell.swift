@@ -11,7 +11,6 @@ class SupportCategoriesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         label.font = UIFont.systemFont(ofSize: 15, weight: .bold)

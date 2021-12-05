@@ -14,10 +14,10 @@
 		B691806D2747E81C00E2ED92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B691806B2747E81C00E2ED92 /* Main.storyboard */; };
 		B691806F2747E81D00E2ED92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B691806E2747E81D00E2ED92 /* Assets.xcassets */; };
 		B69180722747E81D00E2ED92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69180702747E81D00E2ED92 /* LaunchScreen.storyboard */; };
-		B6DFFC8A275CE3310096A109 /* OfficinaSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B6DFFC89275CE3310096A109 /* OfficinaSans-Bold.otf */; };
 		B6DFFC8D275D006A0096A109 /* SupportCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFFC8B275D006A0096A109 /* SupportCategoriesCollectionViewCell.swift */; };
 		B6DFFC8E275D006A0096A109 /* SupportCategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DFFC8C275D006A0096A109 /* SupportCategoriesCollectionViewCell.xib */; };
 		B6DFFC90275D0B940096A109 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFFC8F275D0B940096A109 /* Categories.swift */; };
+		B6DFFC92275D22D90096A109 /* OfficinaSansExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6DFFC91275D22D90096A109 /* OfficinaSansExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +33,10 @@
 		B691806E2747E81D00E2ED92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B69180712747E81D00E2ED92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B69180732747E81D00E2ED92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6DFFC89275CE3310096A109 /* OfficinaSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OfficinaSans-Bold.otf"; sourceTree = "<group>"; };
 		B6DFFC8B275D006A0096A109 /* SupportCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6DFFC8C275D006A0096A109 /* SupportCategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportCategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		B6DFFC8F275D0B940096A109 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		B6DFFC91275D22D90096A109 /* OfficinaSansExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OfficinaSansExtraBold.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 		B62BADFC275CDA0500AE3E41 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				B6DFFC89275CE3310096A109 /* OfficinaSans-Bold.otf */,
+				B6DFFC91275D22D90096A109 /* OfficinaSansExtraBold.ttf */,
 			);
 			name = Fonts;
 			path = ..;
@@ -126,6 +126,7 @@
 				B691805F2747E81C00E2ED92 /* Frameworks */,
 				B69180602747E81C00E2ED92 /* Resources */,
 				886F103CC2371538A8E8007D /* [CP] Embed Pods Frameworks */,
+				B6DFFC93275D2A960096A109 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -176,7 +177,7 @@
 			files = (
 				B69180722747E81D00E2ED92 /* LaunchScreen.storyboard in Resources */,
 				B691806F2747E81D00E2ED92 /* Assets.xcassets in Resources */,
-				B6DFFC8A275CE3310096A109 /* OfficinaSans-Bold.otf in Resources */,
+				B6DFFC92275D22D90096A109 /* OfficinaSansExtraBold.ttf in Resources */,
 				B691806D2747E81C00E2ED92 /* Main.storyboard in Resources */,
 				B6DFFC8E275D006A0096A109 /* SupportCategoriesCollectionViewCell.xib in Resources */,
 			);
@@ -187,6 +188,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		886F103CC2371538A8E8007D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -201,6 +203,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-unowned/Pods-unowned-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B6DFFC93275D2A960096A109 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		DE705E8B3AF2085BBBFD5831 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
