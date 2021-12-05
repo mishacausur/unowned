@@ -464,7 +464,9 @@
 \pard\intbl\itap1\pardeftab720\qr\partightenfactor0
 \cf2 \cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf4 Pods/\cell \row
+\cf4 \cb3 unowned/unowned/Pods/\
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb1 unowned/Pods/\cf4 \cell \row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
 \clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
@@ -472,7 +474,7 @@
 \pard\intbl\itap1\pardeftab720\qr\partightenfactor0
 \cf2 \cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf4 unowned/unowned/Pods\cell \row
+\cf4 \cell \row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
 \clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
@@ -480,10 +482,7 @@
 \pard\intbl\itap1\pardeftab720\qr\partightenfactor0
 \cf2 \cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf7 unowned/Pods\cf4 \
-Podfile\
-Podfile.lock\
-\cell \row
+\cf4 \cell \row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
 \clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
