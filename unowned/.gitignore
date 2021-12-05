@@ -480,6 +480,8 @@
 \cf2 \cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 \cf7 unowned/Pods\cf4 \
+Podfile\
+Podfile.lock\
 \cell \row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
