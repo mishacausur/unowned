@@ -1,24 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ybm-NV-qKq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Помочь-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="unowned" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Raj-mB-00Z">
+                                <rect key="frame" x="4" y="145" width="406" height="751"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="9" minimumInteritemSpacing="9" id="nop-gC-kK3">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SupportCategoriesCollectionViewCell" reuseIdentifier="SupportCategoriesCollectionViewCell" id="hQ1-fh-osF" customClass="SupportCategoriesCollectionViewCell" customModule="unowned" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hs4-eH-7zx">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dlW-9V-TRK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Yba-NT-BN4"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите категорию помощи" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOa-yY-Mrd">
+                                <rect key="frame" x="63" y="108" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Raj-mB-00Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="21D-RR-4YM"/>
+                            <constraint firstItem="XOa-yY-Mrd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KSx-Us-UTx"/>
+                            <constraint firstItem="XOa-yY-Mrd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="f5d-Vr-nSt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Raj-mB-00Z" secondAttribute="trailing" constant="4" id="i5R-OM-okF"/>
+                            <constraint firstItem="Raj-mB-00Z" firstAttribute="top" secondItem="XOa-yY-Mrd" secondAttribute="bottom" constant="16" id="vV2-re-9lt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XOa-yY-Mrd" secondAttribute="trailing" constant="63" id="yYh-KP-KmP"/>
+                            <constraint firstAttribute="bottom" secondItem="Raj-mB-00Z" secondAttribute="bottom" id="z1F-xO-Ghc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Помочь" largeTitleDisplayMode="always" id="oui-vL-pNM">
+                        <barButtonItem key="leftBarButtonItem" image="arrowBack" id="iZB-bY-joT">
+                            <connections>
+                                <action selector="closeApp:" destination="BYZ-38-t0r" id="j6Y-IJ-ih7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="supportCategoriesCollectionView" destination="Raj-mB-00Z" id="RNb-mV-Mdh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2640.579710144928" y="83.705357142857139"/>
+        </scene>
+        <!--Помочь-->
+        <scene sceneID="H8X-o4-hxj">
+            <objects>
+                <navigationController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="jSB-bj-UZ8" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Помочь" image="icon-green-heart" id="Rgu-3e-0mx">
+                        <inset key="imageInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XtZ-uL-P2H">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PZ6-1l-0Fr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6x2-LD-SXb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLD-85-0Iy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839.1304347826087" y="83.705357142857139"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="vxW-53-gG3">
+            <objects>
+                <viewController id="hsA-UQ-04T" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hxs-xG-UfN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dHF-qB-SeY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="iconGreyProfile_2021-12-5" id="88S-4n-BAw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0j-qX-AmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4270" y="863"/>
+        </scene>
+        <!--Поиск-->
+        <scene sceneID="Wz6-aC-bnr">
+            <objects>
+                <viewController id="2or-St-FSp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgX-zg-4ws">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="j6Q-vC-ZMr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Поиск" image="iconSearchGrey_2021-12-5" id="rtW-bw-jp0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySB-jz-AqQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="863"/>
+        </scene>
+        <!--История-->
+        <scene sceneID="z5o-nm-BOd">
+            <objects>
+                <viewController id="J5V-EB-ljE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ys0-Yq-CNi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RdQ-yy-AGh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="История" image="iconGreyHistory_2021-12-5" id="lYR-BH-ThQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bg5-rO-MKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3428" y="863"/>
+        </scene>
+        <!--Новости-->
+        <scene sceneID="cLf-7s-1Ip">
+            <objects>
+                <viewController id="Hte-CY-m2W" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gWt-j2-dIz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ymg-V6-bNv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Новости" image="iconNewsGrey_2021-12-5" id="YbY-Qx-r9k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2u-WB-fpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="863"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="W5A-uy-qiU">
+            <objects>
+                <tabBarController autoresizesArchivedViewToFullSize="NO" wantsFullScreenLayout="YES" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="Ybm-NV-qKq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Fh-Bf-1Fx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="leaf"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="leaf"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hte-CY-m2W" kind="relationship" relationship="viewControllers" id="11J-IW-EjU"/>
+                        <segue destination="2or-St-FSp" kind="relationship" relationship="viewControllers" id="JEU-Ph-yWJ"/>
+                        <segue destination="jSB-bj-UZ8" kind="relationship" relationship="viewControllers" id="Z32-cx-owq"/>
+                        <segue destination="J5V-EB-ljE" kind="relationship" relationship="viewControllers" id="YTa-Fg-Rvj"/>
+                        <segue destination="hsA-UQ-04T" kind="relationship" relationship="viewControllers" id="bjR-4Y-Z1v"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbx-yF-ZV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowBack" width="12" height="21"/>
+        <image name="icon-green-heart" width="54" height="55"/>
+        <image name="iconGreyHistory_2021-12-5" width="25" height="25"/>
+        <image name="iconGreyProfile_2021-12-5" width="25" height="25"/>
+        <image name="iconNewsGrey_2021-12-5" width="25" height="25"/>
+        <image name="iconSearchGrey_2021-12-5" width="25" height="25"/>
+        <namedColor name="leaf">
+            <color red="0.40000000000000002" green="0.65098039215686276" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
