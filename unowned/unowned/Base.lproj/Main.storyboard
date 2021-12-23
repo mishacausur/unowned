@@ -173,6 +173,7 @@
                 <tabBarController autoresizesArchivedViewToFullSize="NO" wantsFullScreenLayout="YES" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="Ybm-NV-qKq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Fh-Bf-1Fx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="leaf"/>

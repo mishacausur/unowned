@@ -7,23 +7,38 @@
 
 import UIKit
 
-class EventsViewController: UIViewController {
+class EventsViewController: UIViewController, ViewControllerable {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    typealias RootView = EventsView
+    var viewModel: EventsViewOutput
+    
+    init(viewModel: EventsViewOutput) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.getData()
+        viewModel.viewInput = self
+        self.navigationItem.hidesBackButton = true
+        view().completion = { [weak self] event in
+            self?.viewModel.coordinator?.eventOccurred(with: .toDetail, with: event, nil)
+        }
+    }
+    override func loadView() {
+        let view = EventsView()
+        self.view = view
+    }
+}
 
+extension EventsViewController: EventsViewInput {
+    func configureTableView(posts: [EventModel]) {
+        DispatchQueue.main.async { [weak self] in
+            self?.view().configureViews(posts)
+        }       
+    }
 }

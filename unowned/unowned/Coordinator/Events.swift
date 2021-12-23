@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum Events {
+    case toEvents
+    case toDetail
+}

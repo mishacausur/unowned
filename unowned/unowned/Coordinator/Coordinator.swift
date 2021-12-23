@@ -6,16 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol Coordinator {
     var navigationViewController: UINavigationController? { get set }
-    func eventOccurred(with type: Event, with string: String?)
-}
-
-protocol Coordinating {
-    var coordinator: Coordinator { get set }
-}
-
-class AppCoordinator: Coordinator {
-    
+    func eventOccurred(with type: Events, with event: EventModel?, _ category: String?)
 }

@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         supportCategoriesCollectionView.register(UINib(nibName: "SupportCategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "SupportCategoriesCollectionViewCell")
-//        navigationController?.navigationBar.titleTextAttributes = [.font: UIFont(name: "OfficinaSansExtraBold", size: 21)]
     }
     
     @IBAction func closeApp(_ sender: Any) {
@@ -44,6 +43,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: .zero, left: 4.5, bottom: 50, right: 4.5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let navVC = navigationController else { return }
+        let coordinator = AppCoordinator(navigationViewController: navVC)
+        coordinator.eventOccurred(with: .toEvents, with: nil, categories.categories[indexPath.item].label)
     }
     
 }
