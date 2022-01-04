@@ -21,12 +21,16 @@ class EventsViewModel: EventsViewOutput {
     weak var viewInput: EventsViewInput?
     var events: [EventModel]?
     func getData() {
-        DataManager.shared.getData { events in
-            DispatchQueue.main.async {
-                self.events = events
-                self.viewInput?.configureTableView(posts: events)
+        let queue = DispatchQueue(label: "background", qos: .background, attributes: .concurrent)
+        queue.sync {
+            DataManager.shared.getData { events in
+                DispatchQueue.main.async {
+                    self.events = events
+                    self.viewInput?.configureTableView(posts: events)
+                    sleep(2)
+//                    self.viewInput.
+                }
             }
-            
         }
     }
 }
