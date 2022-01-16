@@ -29,6 +29,7 @@
 		B6AA7EF1276F643200C09502 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA7EF0276F643200C09502 /* DetailViewController.swift */; };
 		B6AA7EF3276F645200C09502 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA7EF2276F645200C09502 /* DetailView.swift */; };
 		B6AA7EF5276F647B00C09502 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA7EF4276F647B00C09502 /* DetailViewModel.swift */; };
+		B6B8515727943E06007E9451 /* EventDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6B8515527943E06007E9451 /* EventDataModel.xcdatamodeld */; };
 		B6D15CD72767B689006A89BC /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CD62767B689006A89BC /* EventsView.swift */; };
 		B6D15CD92767B694006A89BC /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CD82767B694006A89BC /* EventsViewModel.swift */; };
 		B6D15CDB2767B6A5006A89BC /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CDA2767B6A5006A89BC /* EventsViewController.swift */; };
@@ -76,6 +77,7 @@
 		B6AA7EF0276F643200C09502 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B6AA7EF2276F645200C09502 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B6AA7EF4276F647B00C09502 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		B6B8515627943E06007E9451 /* EventDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventDataModel.xcdatamodel; sourceTree = "<group>"; };
 		B6D15CD62767B689006A89BC /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		B6D15CD82767B694006A89BC /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		B6D15CDA2767B6A5006A89BC /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		B69180642747E81C00E2ED92 /* unowned */ = {
 			isa = PBXGroup;
 			children = (
+				B6B8515427943D14007E9451 /* Core Data */,
 				B6AA7EEA276CE97E00C09502 /* Managers */,
 				B6AA7EE9276CC37500C09502 /* Data Jsons */,
 				B6AA7EBA276A113700C09502 /* Models */,
@@ -249,6 +252,14 @@
 				B6DFFC8F275D0B940096A109 /* Categories.swift */,
 			);
 			path = SupportViewController;
+			sourceTree = "<group>";
+		};
+		B6B8515427943D14007E9451 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				B6B8515527943E06007E9451 /* EventDataModel.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		B6D15CD42767B64B006A89BC /* ViewControllers */ = {
@@ -450,6 +461,7 @@
 				B69180662747E81C00E2ED92 /* AppDelegate.swift in Sources */,
 				B6DFFC90275D0B940096A109 /* Categories.swift in Sources */,
 				B6DFFC8D275D006A0096A109 /* SupportCategoriesCollectionViewCell.swift in Sources */,
+				B6B8515727943E06007E9451 /* EventDataModel.xcdatamodeld in Sources */,
 				B6AA7EE8276CC36600C09502 /* PhoneNumber.swift in Sources */,
 				B6D15CDD2767B6C1006A89BC /* Extensions.swift in Sources */,
 				B6769C0E2774F283000B3D98 /* FacesLikes.swift in Sources */,
@@ -682,6 +694,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B6B8515527943E06007E9451 /* EventDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B6B8515627943E06007E9451 /* EventDataModel.xcdatamodel */,
+			);
+			currentVersion = B6B8515627943E06007E9451 /* EventDataModel.xcdatamodel */;
+			path = EventDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B691805A2747E81C00E2ED92 /* Project object */;
 }
