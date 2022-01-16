@@ -11,17 +11,16 @@ class DataManager {
     static let shared = DataManager()
     func getData(completion: @escaping ([EventModel]) -> Void ) {
         if let path = Bundle.main.path(forResource: "Data", ofType: "json") {
-            do { let contents = try String(contentsOfFile: path)
+            do {
+                let contents = try String(contentsOfFile: path)
                 var result: [EventModel]?
                 let data = contents.data(using: .utf8)
-                print(data)
                 do {
                     guard let data = data else { return }
                     result = try JSONDecoder().decode([EventModel].self, from: data)
-                    completion(result!)
-                    print(result)
-                }
-                catch let error{
+                    guard let result = result else { return }
+                    completion(result)
+                } catch let error {
                     print("Cant decode \(error.localizedDescription)")
                 }
             } catch let error {
