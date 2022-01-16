@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Category: Codable {
+struct CategoryAPI: Codable {
     let name: String
 }

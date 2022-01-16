@@ -30,6 +30,9 @@
 		B6AA7EF3276F645200C09502 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA7EF2276F645200C09502 /* DetailView.swift */; };
 		B6AA7EF5276F647B00C09502 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA7EF4276F647B00C09502 /* DetailViewModel.swift */; };
 		B6B8515727943E06007E9451 /* EventDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6B8515527943E06007E9451 /* EventDataModel.xcdatamodeld */; };
+		B6B85159279467A8007E9451 /* CDCategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B85158279467A8007E9451 /* CDCategoryManager.swift */; };
+		B6B8515B27946990007E9451 /* CDEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8515A27946990007E9451 /* CDEventManager.swift */; };
+		B6B8515D2794699C007E9451 /* CDPhonesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8515C2794699C007E9451 /* CDPhonesManager.swift */; };
 		B6D15CD72767B689006A89BC /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CD62767B689006A89BC /* EventsView.swift */; };
 		B6D15CD92767B694006A89BC /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CD82767B694006A89BC /* EventsViewModel.swift */; };
 		B6D15CDB2767B6A5006A89BC /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CDA2767B6A5006A89BC /* EventsViewController.swift */; };
@@ -78,6 +81,9 @@
 		B6AA7EF2276F645200C09502 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B6AA7EF4276F647B00C09502 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		B6B8515627943E06007E9451 /* EventDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventDataModel.xcdatamodel; sourceTree = "<group>"; };
+		B6B85158279467A8007E9451 /* CDCategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCategoryManager.swift; sourceTree = "<group>"; };
+		B6B8515A27946990007E9451 /* CDEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEventManager.swift; sourceTree = "<group>"; };
+		B6B8515C2794699C007E9451 /* CDPhonesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPhonesManager.swift; sourceTree = "<group>"; };
 		B6D15CD62767B689006A89BC /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		B6D15CD82767B694006A89BC /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		B6D15CDA2767B6A5006A89BC /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				B6B8515527943E06007E9451 /* EventDataModel.xcdatamodeld */,
+				B6B85158279467A8007E9451 /* CDCategoryManager.swift */,
+				B6B8515A27946990007E9451 /* CDEventManager.swift */,
+				B6B8515C2794699C007E9451 /* CDPhonesManager.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -454,6 +463,7 @@
 				B6AA7EF1276F643200C09502 /* DetailViewController.swift in Sources */,
 				B6D15CDB2767B6A5006A89BC /* EventsViewController.swift in Sources */,
 				B6AA7EBC276A114F00C09502 /* EventModel.swift in Sources */,
+				B6B85159279467A8007E9451 /* CDCategoryManager.swift in Sources */,
 				B6D15CE82767BCAF006A89BC /* Settings.swift in Sources */,
 				B663D2E1277B624600363AA8 /* Buttons.swift in Sources */,
 				B6AA7EF5276F647B00C09502 /* DetailViewModel.swift in Sources */,
@@ -464,9 +474,11 @@
 				B6B8515727943E06007E9451 /* EventDataModel.xcdatamodeld in Sources */,
 				B6AA7EE8276CC36600C09502 /* PhoneNumber.swift in Sources */,
 				B6D15CDD2767B6C1006A89BC /* Extensions.swift in Sources */,
+				B6B8515B27946990007E9451 /* CDEventManager.swift in Sources */,
 				B6769C0E2774F283000B3D98 /* FacesLikes.swift in Sources */,
 				B6D15CD92767B694006A89BC /* EventsViewModel.swift in Sources */,
 				B6769C112774F7C9000B3D98 /* FacesView.swift in Sources */,
+				B6B8515D2794699C007E9451 /* CDPhonesManager.swift in Sources */,
 				B6D15CED2768FD69006A89BC /* EventsTableViewCell.swift in Sources */,
 				B69180682747E81C00E2ED92 /* SceneDelegate.swift in Sources */,
 				B6D15CE62767B9B0006A89BC /* Coordinating.swift in Sources */,
