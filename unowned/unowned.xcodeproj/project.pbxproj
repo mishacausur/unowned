@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		345FB558C38356D3F9E37C00 /* Pods_unowned.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D486272EE1F8AD7F8BD6A /* Pods_unowned.framework */; };
+		B663D2E1277B624600363AA8 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B663D2E0277B624600363AA8 /* Buttons.swift */; };
 		B6769C08277360A4000B3D98 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6769C07277360A4000B3D98 /* ContactsView.swift */; };
 		B6769C0A27736466000B3D98 /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6769C0927736466000B3D98 /* PhotosView.swift */; };
 		B6769C0C2774E292000B3D98 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6769C0B2774E292000B3D98 /* ItemView.swift */; };
@@ -50,6 +51,7 @@
 		355D486272EE1F8AD7F8BD6A /* Pods_unowned.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unowned.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4555A9BC2D5DF9BF37758FB9 /* Pods-unowned.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unowned.debug.xcconfig"; path = "Target Support Files/Pods-unowned/Pods-unowned.debug.xcconfig"; sourceTree = "<group>"; };
 		B62BADFF275CDC6B00AE3E41 /* unowned */ = {isa = PBXFileReference; lastKnownFileType = folder; path = unowned; sourceTree = "<group>"; };
+		B663D2E0277B624600363AA8 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		B6769C07277360A4000B3D98 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		B6769C0927736466000B3D98 /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
 		B6769C0B2774E292000B3D98 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				B6769C0F2774F7B5000B3D98 /* Faces */,
 				B6769C0927736466000B3D98 /* PhotosView.swift */,
 				B6769C07277360A4000B3D98 /* ContactsView.swift */,
+				B663D2E0277B624600363AA8 /* Buttons.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				B6D15CDB2767B6A5006A89BC /* EventsViewController.swift in Sources */,
 				B6AA7EBC276A114F00C09502 /* EventModel.swift in Sources */,
 				B6D15CE82767BCAF006A89BC /* Settings.swift in Sources */,
+				B663D2E1277B624600363AA8 /* Buttons.swift in Sources */,
 				B6AA7EF5276F647B00C09502 /* DetailViewModel.swift in Sources */,
 				B6D15CDF2767B7F6006A89BC /* Coordinator.swift in Sources */,
 				B69180662747E81C00E2ED92 /* AppDelegate.swift in Sources */,

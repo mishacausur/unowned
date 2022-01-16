@@ -20,7 +20,6 @@ class DetailViewModel: DetailViewOutput {
     var coordinator: Coordinator?
     weak var  viewInput: DetailViewInput?
     var event: EventModel
-    
     init(event: EventModel) {
         self.event = event
     }
