@@ -17,6 +17,7 @@ extension CDPhoneNumber {
     }
 
     @NSManaged public var number: String?
+    @NSManaged public var uuid: String
     @NSManaged public var event: CDEvent?
 
 }

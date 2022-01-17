@@ -9,7 +9,7 @@ import UIKit
 
 class ContactsView: UIView {
     
-    var event: CDEvent
+    var event: EventModel
     private let navIcon: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "navigation")
@@ -69,7 +69,7 @@ class ContactsView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    init(frame: CGRect, event: CDEvent) {
+    init(frame: CGRect, event: EventModel) {
         self.event = event
         super.init(frame: frame)
         self.backgroundColor = .clear
@@ -78,11 +78,10 @@ class ContactsView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    private func getNumbers(event: CDEvent) -> String {
+    private func getNumbers(event: EventModel) -> String {
         var string = String()
-        let phones = CoreDataManager.shared.CDgetPhoneNumbers(for: event)
-        for item in phones {
-            string = "\(item)"
+        for item in event.phoneNumbers {
+            string.append(contentsOf: item.number)
             string += "\n"
         }
         return string

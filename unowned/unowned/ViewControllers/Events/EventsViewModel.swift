@@ -8,7 +8,7 @@
 import Foundation
 
 protocol EventsViewInput: AnyObject {
-    func configureTableView(posts: [CDEvent])
+    func configureTableView(posts: [EventModel])
 }
 
 protocol EventsViewOutput: Coordinating {
@@ -22,11 +22,13 @@ class EventsViewModel: EventsViewOutput {
     var events: [EventModel]?
     let queue = DispatchQueue(label: "background", qos: .background, attributes: .concurrent)
     func getData() {
-        queue.sync {
-            self.viewInput?.configureTableView(posts: self.readDataFromDB())
-        }
+        DispatchQueue.main.async {
+//            sleep(2)
+            let CDPosts = self.readDataFromDB()
+            let posts = DataManager.shared.mapData(CDPosts)
+            self.viewInput?.configureTableView(posts: posts)
+        } 
     }
-    
     func readDataFromDB() -> [CDEvent] {
         let events = CoreDataManager.shared.CDgetData()
         return events

@@ -88,10 +88,10 @@ class EventsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(_ event: CDEvent) {
+    func configure(_ event: EventModel) {
         eventImage.image = UIImage(named: "kid")
         titleLabel.text = event.name
-        descriptionLabel.text = event.disrcrptn
+        descriptionLabel.text = event.welcomeDescription
     }
     
     private func setupCell() {

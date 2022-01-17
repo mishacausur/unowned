@@ -10,7 +10,7 @@ import UIKit
 
 class EventsView: UIView {
     
-    var completion: ((CDEvent) -> Void)?
+    var completion: ((EventModel) -> Void)?
     
     let segmentController: UISegmentedControl = {
         let items = ["Текущие", "Завершенные"]
@@ -43,7 +43,7 @@ class EventsView: UIView {
     }
     func stopActivity() {
     }
-    func configureViews(_ events: [CDEvent]) {
+    func configureViews(_ events: [EventModel]) {
         let tableView = EventsTableView(frame: .zero, events: events)
         self.addSubviews(segmentController, backgroundView)
         backgroundView.addSubview(tableView)

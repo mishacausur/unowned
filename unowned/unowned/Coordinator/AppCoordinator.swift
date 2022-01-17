@@ -15,7 +15,7 @@ class AppCoordinator: Coordinator {
     init(navigationViewController: UINavigationController) {
         self.navigationViewController = navigationViewController
     }
-    func eventOccurred(with type: Events, with event: CDEvent?, _ category: String?) {
+    func eventOccurred(with type: Events, with event: EventModel?, _ category: String?) {
         switch type {
         case .toDetail:
             guard let event = event else {
@@ -37,7 +37,7 @@ class AppCoordinator: Coordinator {
         viewModel.viewInput = viewController
         navigationViewController?.pushViewController(viewController, animated: true)
     }
-    private func pushDetailViewController(_ event: CDEvent) {
+    private func pushDetailViewController(_ event: EventModel) {
         let viewModel = DetailViewModel(event: event)
         viewModel.coordinator = self
         let viewController = DetailViewController(viewModel: viewModel)

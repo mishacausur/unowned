@@ -30,4 +30,43 @@ class DataManager {
             print("data file doesn't found :(")
         }
     }
+    func mapData(_ events: [CDEvent]) -> [EventModel] {
+        var models: [EventModel] = []
+        for event in events {
+            let model = castCDDataToModel(event)
+                models.append(model)
+            
+        }
+        return models.compactMap { $0 }
+    }
+    func castCDDataToModel(_ event: CDEvent) -> EventModel {
+        if let address = event.address,
+           let cat = event.category,
+           let id = event.id,
+           let name = event.name,
+           let description = event.disrcrptn,
+           let startDate = Int(event.startDate!),
+           let endDate = Int(event.endDate!) {
+            let phones = getPhoneNumbers(event)
+            let category = CategoryAPI(name: cat)
+            let model = EventModel(id: id, category: category, name: name, welcomeDescription: description, startDate: startDate, endDate: endDate, address: address, phoneNumbers: phones)
+            
+            return model
+        } else {
+            fatalError()
+        }
+       
+    }
+    
+    func getPhoneNumbers(_ event: CDEvent) -> [PhoneNumber] {
+        var items: [PhoneNumber] = []
+        guard let id = event.id else { return [] }
+        let phones = CoreDataManager.shared.CDgetPhoneNumbers(for: id)
+        for phone in phones {
+            let number = PhoneNumber(number: phone.number!)
+            items.append(number)
+        }
+       return items
+    }
 }
+

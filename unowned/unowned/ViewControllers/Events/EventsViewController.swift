@@ -36,7 +36,7 @@ class EventsViewController: UIViewController, ViewControllerable {
 }
 
 extension EventsViewController: EventsViewInput {
-    func configureTableView(posts: [CDEvent]) {
+    func configureTableView(posts: [EventModel]) {
         DispatchQueue.main.async { [weak self] in
             self?.view().configureViews(posts)
         }       

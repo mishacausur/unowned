@@ -39,6 +39,7 @@ class CoreDataManager {
         let event = CDEvent(entity: NSEntityDescription.entity(forEntityName: "CDEvent", in: backgroundContext)!, insertInto: backgroundContext)
         event.id = model.id
         event.disrcrptn = model.welcomeDescription
+        event.category = model.category.name
         event.name = model.name
         event.address = model.address
         event.startDate = ("\(model.startDate)")
@@ -46,6 +47,7 @@ class CoreDataManager {
         for i in model.phoneNumbers {
             let number = CDPhoneNumber(entity: NSEntityDescription.entity(forEntityName: "CDPhoneNumber", in: backgroundContext)!, insertInto: backgroundContext)
             number.number = i.number
+            number.uuid = model.id
         }
         backgroundContext.perform { [weak self] in
             do {
@@ -70,13 +72,14 @@ class CoreDataManager {
         return events
     }
     
-    func CDgetPhoneNumbers(for event: CDEvent) -> [CDPhoneNumber] {
+    func CDgetPhoneNumbers(for id: String) -> [CDPhoneNumber] {
         let fetch: NSFetchRequest<CDPhoneNumber> = CDPhoneNumber.fetchRequest()
-        let predicate = NSPredicate(format: "event == %@", event)
+        fetch.fetchBatchSize = 1
+//        let predicate = NSPredicate(format: "event  == %@", event)
+        let predicate = NSPredicate(format: "%K == %@", #keyPath(CDPhoneNumber.uuid), id)
         fetch.predicate = predicate
         do {
-            let item = try viewContext.fetch(fetch)
-            print(item)
+            let item = try backgroundContext.fetch(fetch)
             return item
         } catch {
             fatalError()

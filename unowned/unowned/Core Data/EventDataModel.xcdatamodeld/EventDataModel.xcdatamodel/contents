@@ -15,11 +15,12 @@
     </entity>
     <entity name="CDPhoneNumber" representedClassName="unowned.CDPhoneNumber" syncable="YES">
         <attribute name="number" optional="YES" attributeType="String"/>
+        <attribute name="uuid" attributeType="String"/>
         <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEvent" inverseName="phoneNumbers" inverseEntity="CDEvent"/>
     </entity>
     <elements>
         <element name="CDCategoryName" positionX="-611.84375" positionY="-351.88671875" width="128" height="58"/>
         <element name="CDEvent" positionX="-403.453125" positionY="-288.74609375" width="128" height="163"/>
-        <element name="CDPhoneNumber" positionX="-614.66796875" positionY="-56.07421875" width="128" height="73"/>
+        <element name="CDPhoneNumber" positionX="-614.66796875" positionY="-56.07421875" width="128" height="88"/>
     </elements>
 </model>
