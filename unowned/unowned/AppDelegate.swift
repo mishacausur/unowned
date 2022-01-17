@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.barTintColor = UIColor.init(named: "leaf")
         let font = Font.setFont(.extrabold, 21)
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: font]
+        getAndSaveData()
         return true
     }
     
@@ -28,27 +29,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-    
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "unowned")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+    func getAndSaveData() {
+        DataManager.shared.getData { [weak self] events in
+            DispatchQueue.main.async {
+                self?.saveDataToDB(events)
+                print(events)
             }
-        })
-        return container
-    }()
-    
-    // MARK: - Core Data Saving support
-    
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    func saveDataToDB(_ events: [EventModel]) {
+        for item in events {
+            CoreDataManager.shared.save(item) {
+               
             }
         }
     }

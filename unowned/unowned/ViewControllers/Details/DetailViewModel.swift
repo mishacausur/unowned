@@ -13,14 +13,14 @@ protocol DetailViewInput: AnyObject {
 
 protocol DetailViewOutput: Coordinating {
     var viewInput: DetailViewInput? { get set }
-    var event: EventModel { get }
+    var event: CDEvent { get }
 }
 
 class DetailViewModel: DetailViewOutput {
     var coordinator: Coordinator?
     weak var  viewInput: DetailViewInput?
-    var event: EventModel
-    init(event: EventModel) {
+    var event: CDEvent
+    init(event: CDEvent) {
         self.event = event
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CDCategoryName" representedClassName="CDCategoryName" syncable="YES">
+    <entity name="CDCategoryName" representedClassName="unowned.CDCategoryName" syncable="YES">
         <attribute name="name" attributeType="String"/>
     </entity>
-    <entity name="CDEvent" representedClassName="CDEvent" syncable="YES">
+    <entity name="CDEvent" representedClassName="unowned.CDEvent" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String"/>
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="disrcrptn" optional="YES" attributeType="String"/>
@@ -11,9 +11,9 @@
         <attribute name="id" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="startDate" optional="YES" attributeType="String"/>
-        <relationship name="phoneNumbers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDPhoneNumber" inverseName="event" inverseEntity="CDPhoneNumber"/>
+        <relationship name="phoneNumbers" optional="YES" toMany="YES" minCount="2" maxCount="2" deletionRule="Nullify" destinationEntity="CDPhoneNumber" inverseName="event" inverseEntity="CDPhoneNumber"/>
     </entity>
-    <entity name="CDPhoneNumber" representedClassName="CDPhoneNumber" syncable="YES">
+    <entity name="CDPhoneNumber" representedClassName="unowned.CDPhoneNumber" syncable="YES">
         <attribute name="number" optional="YES" attributeType="String"/>
         <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEvent" inverseName="phoneNumbers" inverseEntity="CDEvent"/>
     </entity>

@@ -10,5 +10,5 @@ import UIKit
 
 protocol Coordinator {
     var navigationViewController: UINavigationController? { get set }
-    func eventOccurred(with type: Events, with event: EventModel?, _ category: String?)
+    func eventOccurred(with type: Events, with event: CDEvent?, _ category: String?)
 }

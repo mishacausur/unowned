@@ -10,7 +10,7 @@ import UIKit
 
 class DetailView: UIView {
     
-    var event: EventModel
+    var event: CDEvent
     
     private let scrollView = UIScrollView(frame: .zero)
     private let titleLabel: UILabel = {
@@ -83,7 +83,7 @@ class DetailView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    init(frame: CGRect, event: EventModel) {
+    init(frame: CGRect, event: CDEvent) {
         self.event = event
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -103,7 +103,7 @@ class DetailView: UIView {
         contacts.translatesAutoresizingMaskIntoConstraints = false
         photos.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = event.name
-        descriptionLabel.text = event.welcomeDescription
+        descriptionLabel.text = event.disrcrptn
         let contraints = [
             scrollView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),

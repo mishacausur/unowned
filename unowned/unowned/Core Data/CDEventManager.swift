@@ -17,15 +17,15 @@
 //    @nonobjc public class func fetchRequest() -> NSFetchRequest<CDEvent> {
 //        return NSFetchRequest<CDEvent>(entityName: "CDEvent")
 //    }
-//  
+//
 //    @NSManaged public var address: String?
 //    @NSManaged public var disrcrptn: String?
 //    @NSManaged public var endDate: String?
-//    @NSManaged public var id: UUID?
+//    @NSManaged public var id: String?
 //    @NSManaged public var name: String?
 //    @NSManaged public var startDate: String?
+//    @NSManaged public var category: String?
 //    @NSManaged public var phoneNumbers: NSSet?
-//    @NSManaged public var category: CDCategoryName?
 //
 //}
 //

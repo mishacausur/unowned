@@ -12,7 +12,7 @@ class EventsTableView: UIView {
     
     var completion: ((Int) -> Void)?
     
-    var events: [EventModel]
+    var events: [CDEvent]
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -24,7 +24,7 @@ class EventsTableView: UIView {
         return tableView
     }()
     
-    init(frame: CGRect, events: [EventModel]) {
+    init(frame: CGRect, events: [CDEvent]) {
         self.events = events
         super.init(frame: frame)
         self.backgroundColor = Color.color(.lightGrey)

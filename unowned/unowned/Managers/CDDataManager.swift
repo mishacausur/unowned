@@ -18,7 +18,7 @@ class CoreDataManager {
     
     private(set) lazy var persistentContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "unowned")
+        let container = NSPersistentContainer(name: "EventDataModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -35,8 +35,8 @@ class CoreDataManager {
         return persistentContainer.newBackgroundContext()
     }()
     
-    func save(_ model: EventModel) {
-        let event = CDEvent(context: backgroundContext)
+    func save(_ model: EventModel, completion: @escaping () -> ()) {
+        let event = CDEvent(entity: NSEntityDescription.entity(forEntityName: "CDEvent", in: backgroundContext)!, insertInto: backgroundContext)
         event.id = model.id
         event.disrcrptn = model.welcomeDescription
         event.name = model.name
@@ -44,41 +44,43 @@ class CoreDataManager {
         event.startDate = ("\(model.startDate)")
         event.endDate = ("\(model.endDate)")
         for i in model.phoneNumbers {
-            let number = CDPhoneNumber(context: backgroundContext)
+            let number = CDPhoneNumber(entity: NSEntityDescription.entity(forEntityName: "CDPhoneNumber", in: backgroundContext)!, insertInto: backgroundContext)
             number.number = i.number
         }
         backgroundContext.perform { [weak self] in
             do {
                 try self?.backgroundContext.save()
+                completion()
             }
             catch let error {
-                print(error.localizedDescription)
+                print("\(error.localizedDescription) THIS IS ERRRRRRRORRRRR")
             }
         }
     }
     
     func CDgetData() -> [CDEvent] {
+        var events: [CDEvent] = []
         let fetch: NSFetchRequest<CDEvent> = CDEvent.fetchRequest()
+//        fetch.includesSubentities = false
         do {
-            return try viewContext.fetch(fetch)
-        } catch {
-            fatalError()
+            events = try viewContext.fetch(fetch)
+        } catch let error {
+            print(error.localizedDescription)
         }
+        return events
     }
     
-    func CDgetPhoneNumbers(for event: CDEvent) -> [String] {
-        var items: [String] = []
+    func CDgetPhoneNumbers(for event: CDEvent) -> [CDPhoneNumber] {
         let fetch: NSFetchRequest<CDPhoneNumber> = CDPhoneNumber.fetchRequest()
+        let predicate = NSPredicate(format: "event == %@", event)
+        fetch.predicate = predicate
         do {
             let item = try viewContext.fetch(fetch)
-            for i in item {
-                guard let string = i.number else { return items }
-                items.append(string)
-            }
+            print(item)
+            return item
         } catch {
             fatalError()
         }
-        return items
     }
     
     func saveContext () {
