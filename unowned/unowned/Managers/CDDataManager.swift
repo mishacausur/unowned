@@ -16,7 +16,7 @@ class CoreDataManager {
     private init() {
     }
     
-    lazy var persistentContainer: NSPersistentContainer = {
+    private(set) lazy var persistentContainer: NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "unowned")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -44,9 +44,9 @@ class CoreDataManager {
         event.startDate = ("\(model.startDate)")
         event.endDate = ("\(model.endDate)")
         for i in model.phoneNumbers {
-            event.phoneNumbers.inse
+            let number = CDPhoneNumber(context: backgroundContext)
+            number.number = i.number
         }
-        event.phoneNumbers = numbers
         backgroundContext.perform { [weak self] in
             do {
                 try self?.backgroundContext.save()
@@ -66,17 +66,19 @@ class CoreDataManager {
         }
     }
     
-    func performData(_ CDEvents: [CDEvent]) -> [EventModel] {
-        var events: [EventModel] = []
-        for i in CDEvents {
-            guard let id = i.id,
-                  let name = i.name,
-                  let address = i.address,
-                  let descr = i.disrcrptn,
-                  let startDate = i.startDate,
-                  let endDate = i.endDate,
-                  let phones = i.phoneNumbers
+    func CDgetPhoneNumbers(for event: CDEvent) -> [String] {
+        var items: [String] = []
+        let fetch: NSFetchRequest<CDPhoneNumber> = CDPhoneNumber.fetchRequest()
+        do {
+            let item = try viewContext.fetch(fetch)
+            for i in item {
+                guard let string = i.number else { return items }
+                items.append(string)
+            }
+        } catch {
+            fatalError()
         }
+        return items
     }
     
     func saveContext () {

@@ -36,10 +36,10 @@
 		B6BE82B82794760D0059D26B /* CDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82B72794760D0059D26B /* CDDataManager.swift */; };
 		B6BE82CD279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82C7279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift */; };
 		B6BE82CE279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82C8279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift */; };
-		B6BE82D5279489E20059D26B /* CDEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82D1279489E20059D26B /* CDEvent+CoreDataClass.swift */; };
-		B6BE82D6279489E20059D26B /* CDEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82D2279489E20059D26B /* CDEvent+CoreDataProperties.swift */; };
-		B6BE82D7279489E20059D26B /* CDCategoryName+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82D3279489E20059D26B /* CDCategoryName+CoreDataClass.swift */; };
-		B6BE82D8279489E20059D26B /* CDCategoryName+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82D4279489E20059D26B /* CDCategoryName+CoreDataProperties.swift */; };
+		B6BE82DD2795AB120059D26B /* CDEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82D92795AB120059D26B /* CDEvent+CoreDataClass.swift */; };
+		B6BE82DE2795AB120059D26B /* CDEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82DA2795AB120059D26B /* CDEvent+CoreDataProperties.swift */; };
+		B6BE82DF2795AB120059D26B /* CDCategoryName+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82DB2795AB120059D26B /* CDCategoryName+CoreDataClass.swift */; };
+		B6BE82E02795AB120059D26B /* CDCategoryName+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82DC2795AB120059D26B /* CDCategoryName+CoreDataProperties.swift */; };
 		B6D15CD72767B689006A89BC /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CD62767B689006A89BC /* EventsView.swift */; };
 		B6D15CD92767B694006A89BC /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CD82767B694006A89BC /* EventsViewModel.swift */; };
 		B6D15CDB2767B6A5006A89BC /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CDA2767B6A5006A89BC /* EventsViewController.swift */; };
@@ -94,10 +94,10 @@
 		B6BE82B72794760D0059D26B /* CDDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDataManager.swift; sourceTree = "<group>"; };
 		B6BE82C7279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPhoneNumber+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B6BE82C8279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPhoneNumber+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B6BE82D1279489E20059D26B /* CDEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDEvent+CoreDataClass.swift"; path = "unowned/CDEvent+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		B6BE82D2279489E20059D26B /* CDEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDEvent+CoreDataProperties.swift"; path = "unowned/CDEvent+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		B6BE82D3279489E20059D26B /* CDCategoryName+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDCategoryName+CoreDataClass.swift"; path = "unowned/CDCategoryName+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		B6BE82D4279489E20059D26B /* CDCategoryName+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDCategoryName+CoreDataProperties.swift"; path = "unowned/CDCategoryName+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B6BE82D92795AB120059D26B /* CDEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDEvent+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B6BE82DA2795AB120059D26B /* CDEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDEvent+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B6BE82DB2795AB120059D26B /* CDCategoryName+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDCategoryName+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B6BE82DC2795AB120059D26B /* CDCategoryName+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDCategoryName+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B6D15CD62767B689006A89BC /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		B6D15CD82767B694006A89BC /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		B6D15CDA2767B6A5006A89BC /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -278,10 +278,10 @@
 		B6B8515427943D14007E9451 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				B6BE82D1279489E20059D26B /* CDEvent+CoreDataClass.swift */,
-				B6BE82D2279489E20059D26B /* CDEvent+CoreDataProperties.swift */,
-				B6BE82D3279489E20059D26B /* CDCategoryName+CoreDataClass.swift */,
-				B6BE82D4279489E20059D26B /* CDCategoryName+CoreDataProperties.swift */,
+				B6BE82D92795AB120059D26B /* CDEvent+CoreDataClass.swift */,
+				B6BE82DA2795AB120059D26B /* CDEvent+CoreDataProperties.swift */,
+				B6BE82DB2795AB120059D26B /* CDCategoryName+CoreDataClass.swift */,
+				B6BE82DC2795AB120059D26B /* CDCategoryName+CoreDataProperties.swift */,
 				B6BE82C7279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift */,
 				B6BE82C8279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift */,
 				B6B8515527943E06007E9451 /* EventDataModel.xcdatamodeld */,
@@ -483,9 +483,9 @@
 				B6D15CE22767B975006A89BC /* Events.swift in Sources */,
 				B6769C0C2774E292000B3D98 /* ItemView.swift in Sources */,
 				B6BE82B82794760D0059D26B /* CDDataManager.swift in Sources */,
-				B6BE82D6279489E20059D26B /* CDEvent+CoreDataProperties.swift in Sources */,
 				B6AA7EF1276F643200C09502 /* DetailViewController.swift in Sources */,
 				B6D15CDB2767B6A5006A89BC /* EventsViewController.swift in Sources */,
+				B6BE82DE2795AB120059D26B /* CDEvent+CoreDataProperties.swift in Sources */,
 				B6AA7EBC276A114F00C09502 /* EventModel.swift in Sources */,
 				B6B85159279467A8007E9451 /* CDCategoryManager.swift in Sources */,
 				B6D15CE82767BCAF006A89BC /* Settings.swift in Sources */,
@@ -504,12 +504,12 @@
 				B6D15CD92767B694006A89BC /* EventsViewModel.swift in Sources */,
 				B6769C112774F7C9000B3D98 /* FacesView.swift in Sources */,
 				B6B8515D2794699C007E9451 /* CDPhonesManager.swift in Sources */,
-				B6BE82D5279489E20059D26B /* CDEvent+CoreDataClass.swift in Sources */,
-				B6BE82D7279489E20059D26B /* CDCategoryName+CoreDataClass.swift in Sources */,
 				B6D15CED2768FD69006A89BC /* EventsTableViewCell.swift in Sources */,
+				B6BE82DD2795AB120059D26B /* CDEvent+CoreDataClass.swift in Sources */,
+				B6BE82DF2795AB120059D26B /* CDCategoryName+CoreDataClass.swift in Sources */,
 				B69180682747E81C00E2ED92 /* SceneDelegate.swift in Sources */,
 				B6D15CE62767B9B0006A89BC /* Coordinating.swift in Sources */,
-				B6BE82D8279489E20059D26B /* CDCategoryName+CoreDataProperties.swift in Sources */,
+				B6BE82E02795AB120059D26B /* CDCategoryName+CoreDataProperties.swift in Sources */,
 				B6D15CD72767B689006A89BC /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

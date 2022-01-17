@@ -2,7 +2,7 @@
 //  CDEvent+CoreDataProperties.swift
 //  unowned
 //
-//  Created by Misha Causur on 16.01.2022.
+//  Created by Misha Causur on 17.01.2022.
 //
 //
 
@@ -22,6 +22,7 @@ extension CDEvent {
     @NSManaged public var id: String?
     @NSManaged public var name: String?
     @NSManaged public var startDate: String?
+    @NSManaged public var category: String?
     @NSManaged public var phoneNumbers: NSSet?
 
 }

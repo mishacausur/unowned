@@ -2,7 +2,7 @@
 //  CDCategoryName+CoreDataClass.swift
 //  unowned
 //
-//  Created by Misha Causur on 16.01.2022.
+//  Created by Misha Causur on 17.01.2022.
 //
 //
 
