@@ -33,6 +33,13 @@
 		B6B85159279467A8007E9451 /* CDCategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B85158279467A8007E9451 /* CDCategoryManager.swift */; };
 		B6B8515B27946990007E9451 /* CDEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8515A27946990007E9451 /* CDEventManager.swift */; };
 		B6B8515D2794699C007E9451 /* CDPhonesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8515C2794699C007E9451 /* CDPhonesManager.swift */; };
+		B6BE82B82794760D0059D26B /* CDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82B72794760D0059D26B /* CDDataManager.swift */; };
+		B6BE82CD279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82C7279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift */; };
+		B6BE82CE279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82C8279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift */; };
+		B6BE82D5279489E20059D26B /* CDEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82D1279489E20059D26B /* CDEvent+CoreDataClass.swift */; };
+		B6BE82D6279489E20059D26B /* CDEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82D2279489E20059D26B /* CDEvent+CoreDataProperties.swift */; };
+		B6BE82D7279489E20059D26B /* CDCategoryName+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82D3279489E20059D26B /* CDCategoryName+CoreDataClass.swift */; };
+		B6BE82D8279489E20059D26B /* CDCategoryName+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82D4279489E20059D26B /* CDCategoryName+CoreDataProperties.swift */; };
 		B6D15CD72767B689006A89BC /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CD62767B689006A89BC /* EventsView.swift */; };
 		B6D15CD92767B694006A89BC /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CD82767B694006A89BC /* EventsViewModel.swift */; };
 		B6D15CDB2767B6A5006A89BC /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D15CDA2767B6A5006A89BC /* EventsViewController.swift */; };
@@ -84,6 +91,13 @@
 		B6B85158279467A8007E9451 /* CDCategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCategoryManager.swift; sourceTree = "<group>"; };
 		B6B8515A27946990007E9451 /* CDEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEventManager.swift; sourceTree = "<group>"; };
 		B6B8515C2794699C007E9451 /* CDPhonesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPhonesManager.swift; sourceTree = "<group>"; };
+		B6BE82B72794760D0059D26B /* CDDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDataManager.swift; sourceTree = "<group>"; };
+		B6BE82C7279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPhoneNumber+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B6BE82C8279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPhoneNumber+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B6BE82D1279489E20059D26B /* CDEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDEvent+CoreDataClass.swift"; path = "unowned/CDEvent+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B6BE82D2279489E20059D26B /* CDEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDEvent+CoreDataProperties.swift"; path = "unowned/CDEvent+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B6BE82D3279489E20059D26B /* CDCategoryName+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDCategoryName+CoreDataClass.swift"; path = "unowned/CDCategoryName+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B6BE82D4279489E20059D26B /* CDCategoryName+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDCategoryName+CoreDataProperties.swift"; path = "unowned/CDCategoryName+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B6D15CD62767B689006A89BC /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		B6D15CD82767B694006A89BC /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		B6D15CDA2767B6A5006A89BC /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				B6AA7EEB276CE99500C09502 /* DataManager.swift */,
+				B6BE82B72794760D0059D26B /* CDDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -263,6 +278,12 @@
 		B6B8515427943D14007E9451 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				B6BE82D1279489E20059D26B /* CDEvent+CoreDataClass.swift */,
+				B6BE82D2279489E20059D26B /* CDEvent+CoreDataProperties.swift */,
+				B6BE82D3279489E20059D26B /* CDCategoryName+CoreDataClass.swift */,
+				B6BE82D4279489E20059D26B /* CDCategoryName+CoreDataProperties.swift */,
+				B6BE82C7279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift */,
+				B6BE82C8279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift */,
 				B6B8515527943E06007E9451 /* EventDataModel.xcdatamodeld */,
 				B6B85158279467A8007E9451 /* CDCategoryManager.swift */,
 				B6B8515A27946990007E9451 /* CDEventManager.swift */,
@@ -454,12 +475,15 @@
 				B691806A2747E81C00E2ED92 /* ViewController.swift in Sources */,
 				B6769C142774F7FA000B3D98 /* StackItemView.swift in Sources */,
 				B6D15CEB2768FAC0006A89BC /* EventsTableView.swift in Sources */,
+				B6BE82CE279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift in Sources */,
 				B6AA7EBE276A11A400C09502 /* CategoriesModel.swift in Sources */,
 				B6769C08277360A4000B3D98 /* ContactsView.swift in Sources */,
 				B6AA7EF3276F645200C09502 /* DetailView.swift in Sources */,
 				B6769C0A27736466000B3D98 /* PhotosView.swift in Sources */,
 				B6D15CE22767B975006A89BC /* Events.swift in Sources */,
 				B6769C0C2774E292000B3D98 /* ItemView.swift in Sources */,
+				B6BE82B82794760D0059D26B /* CDDataManager.swift in Sources */,
+				B6BE82D6279489E20059D26B /* CDEvent+CoreDataProperties.swift in Sources */,
 				B6AA7EF1276F643200C09502 /* DetailViewController.swift in Sources */,
 				B6D15CDB2767B6A5006A89BC /* EventsViewController.swift in Sources */,
 				B6AA7EBC276A114F00C09502 /* EventModel.swift in Sources */,
@@ -467,6 +491,7 @@
 				B6D15CE82767BCAF006A89BC /* Settings.swift in Sources */,
 				B663D2E1277B624600363AA8 /* Buttons.swift in Sources */,
 				B6AA7EF5276F647B00C09502 /* DetailViewModel.swift in Sources */,
+				B6BE82CD279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift in Sources */,
 				B6D15CDF2767B7F6006A89BC /* Coordinator.swift in Sources */,
 				B69180662747E81C00E2ED92 /* AppDelegate.swift in Sources */,
 				B6DFFC90275D0B940096A109 /* Categories.swift in Sources */,
@@ -479,9 +504,12 @@
 				B6D15CD92767B694006A89BC /* EventsViewModel.swift in Sources */,
 				B6769C112774F7C9000B3D98 /* FacesView.swift in Sources */,
 				B6B8515D2794699C007E9451 /* CDPhonesManager.swift in Sources */,
+				B6BE82D5279489E20059D26B /* CDEvent+CoreDataClass.swift in Sources */,
+				B6BE82D7279489E20059D26B /* CDCategoryName+CoreDataClass.swift in Sources */,
 				B6D15CED2768FD69006A89BC /* EventsTableViewCell.swift in Sources */,
 				B69180682747E81C00E2ED92 /* SceneDelegate.swift in Sources */,
 				B6D15CE62767B9B0006A89BC /* Coordinating.swift in Sources */,
+				B6BE82D8279489E20059D26B /* CDCategoryName+CoreDataProperties.swift in Sources */,
 				B6D15CD72767B689006A89BC /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
