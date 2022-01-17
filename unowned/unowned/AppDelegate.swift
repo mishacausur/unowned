@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.backgroundColor = UIColor.init(named: "leaf")
         appearance.tintColor = .white
         appearance.barTintColor = UIColor.init(named: "leaf")
-        let font = UIFont.systemFont(ofSize: 21, weight: .heavy)
+        let font = Font.setFont(.extrabold, 21)
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: font]
         return true
     }
