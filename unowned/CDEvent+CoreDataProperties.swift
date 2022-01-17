@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension CDEvent {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDEvent> {
@@ -44,6 +43,4 @@ extension CDEvent {
 
 }
 
-extension CDEvent : Identifiable {
-
-}
+extension CDEvent: Identifiable {}

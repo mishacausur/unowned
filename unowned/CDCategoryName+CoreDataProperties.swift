@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension CDCategoryName {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDCategoryName> {
@@ -19,7 +18,4 @@ extension CDCategoryName {
     @NSManaged public var name: String?
 
 }
-
-extension CDCategoryName : Identifiable {
-
-}
+extension CDCategoryName: Identifiable {}

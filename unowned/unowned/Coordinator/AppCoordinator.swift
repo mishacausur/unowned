@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 class AppCoordinator: Coordinator {
-    
     var navigationViewController: UINavigationController?
-    
     init(navigationViewController: UINavigationController) {
         self.navigationViewController = navigationViewController
     }

@@ -11,12 +11,10 @@ class EventsViewController: UIViewController, ViewControllerable {
 
     typealias RootView = EventsView
     var viewModel: EventsViewOutput
-    
     init(viewModel: EventsViewOutput) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -39,6 +37,6 @@ extension EventsViewController: EventsViewInput {
     func configureTableView(posts: [EventModel]) {
         DispatchQueue.main.async { [weak self] in
             self?.view().configureViews(posts)
-        }       
+        }
     }
 }

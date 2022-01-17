@@ -27,7 +27,7 @@ class EventsViewModel: EventsViewOutput {
             let CDPosts = self.readDataFromDB()
             let posts = DataManager.shared.mapData(CDPosts)
             self.viewInput?.configureTableView(posts: posts)
-        } 
+        }
     }
     func readDataFromDB() -> [CDEvent] {
         let events = CoreDataManager.shared.CDgetData()

@@ -17,7 +17,6 @@ final class StackItemsView: UIView {
         stack.spacing = 1
         return stack
     }()
-    
     init(frame: CGRect, data: [Item]) {
         super.init(frame: frame)
         configure()
@@ -27,7 +26,6 @@ final class StackItemsView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     private func setup(data: [Item]) {
         data.forEach { value in
             let view = ItemView()
@@ -36,7 +34,6 @@ final class StackItemsView: UIView {
             stackView.addArrangedSubview(view)
         }
     }
-    
     private func configure() {
         self.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false

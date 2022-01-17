@@ -35,7 +35,6 @@ class DataManager {
         for event in events {
             let model = castCDDataToModel(event)
                 models.append(model)
-            
         }
         return models.compactMap { $0 }
     }
@@ -50,14 +49,11 @@ class DataManager {
             let phones = getPhoneNumbers(event)
             let category = CategoryAPI(name: cat)
             let model = EventModel(id: id, category: category, name: name, welcomeDescription: description, startDate: startDate, endDate: endDate, address: address, phoneNumbers: phones)
-            
             return model
         } else {
             fatalError()
         }
-       
     }
-    
     func getPhoneNumbers(_ event: CDEvent) -> [PhoneNumber] {
         var items: [PhoneNumber] = []
         guard let id = event.id else { return [] }
@@ -69,4 +65,3 @@ class DataManager {
        return items
     }
 }
-

@@ -8,7 +8,6 @@
 import UIKit
 
 class ContactsView: UIView {
-    
     var event: EventModel
     private let navIcon: UIImageView = {
         let image = UIImageView()
@@ -115,5 +114,4 @@ class ContactsView: UIView {
             linkLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)]
         NSLayoutConstraint.activate(constraints)
     }
-    
 }
