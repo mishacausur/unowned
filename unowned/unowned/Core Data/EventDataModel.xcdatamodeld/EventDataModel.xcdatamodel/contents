@@ -8,7 +8,7 @@
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="disrcrptn" optional="YES" attributeType="String"/>
         <attribute name="endDate" optional="YES" attributeType="String"/>
-        <attribute name="id" attributeType="String"/>
+        <attribute name="identify" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="startDate" optional="YES" attributeType="String"/>
         <relationship name="phoneNumbers" optional="YES" toMany="YES" minCount="2" maxCount="2" deletionRule="Nullify" destinationEntity="CDPhoneNumber" inverseName="event" inverseEntity="CDPhoneNumber"/>
@@ -20,7 +20,7 @@
     </entity>
     <elements>
         <element name="CDCategoryName" positionX="-611.84375" positionY="-351.88671875" width="128" height="58"/>
-        <element name="CDEvent" positionX="-403.453125" positionY="-288.74609375" width="128" height="163"/>
+        <element name="CDEvent" positionX="-403.453125" positionY="-288.74609375" width="128" height="149"/>
         <element name="CDPhoneNumber" positionX="-614.66796875" positionY="-56.07421875" width="128" height="88"/>
     </elements>
 </model>

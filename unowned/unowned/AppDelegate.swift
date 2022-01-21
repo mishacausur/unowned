@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.barTintColor = UIColor.init(named: "leaf")
         let font = Font.setFont(.extrabold, 21)
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: font]
-        getAndSaveData()
         return true
     }
     
@@ -29,19 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-    func getAndSaveData() {
-        DataManager.shared.getData { [weak self] events in
-            DispatchQueue.main.async {
-                self?.saveDataToDB(events)
-                print(events)
-            }
-        }
-    }
-    func saveDataToDB(_ events: [EventModel]) {
-        for item in events {
-            CoreDataManager.shared.save(item) {
-               
-            }
-        }
-    }
+    
+    
 }

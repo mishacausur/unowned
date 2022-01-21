@@ -18,7 +18,7 @@ extension CDEvent {
     @NSManaged public var address: String?
     @NSManaged public var disrcrptn: String?
     @NSManaged public var endDate: String?
-    @NSManaged public var id: String?
+    @NSManaged public var identify: String?
     @NSManaged public var name: String?
     @NSManaged public var startDate: String?
     @NSManaged public var category: String?

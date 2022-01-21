@@ -29,6 +29,8 @@
 		B6AA7EF3276F645200C09502 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA7EF2276F645200C09502 /* DetailView.swift */; };
 		B6AA7EF5276F647B00C09502 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA7EF4276F647B00C09502 /* DetailViewModel.swift */; };
 		B6B8515727943E06007E9451 /* EventDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6B8515527943E06007E9451 /* EventDataModel.xcdatamodeld */; };
+		B6B8F4DC279AF238004CCD77 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = B6B8F4DB279AF238004CCD77 /* Categories.json */; };
+		B6B8F4DE279AFBF2004CCD77 /* SupportCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8F4DD279AFBF2004CCD77 /* SupportCategoriesViewModel.swift */; };
 		B6BE82B82794760D0059D26B /* CDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82B72794760D0059D26B /* CDDataManager.swift */; };
 		B6BE82CD279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82C7279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift */; };
 		B6BE82CE279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE82C8279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift */; };
@@ -83,6 +85,8 @@
 		B6AA7EF2276F645200C09502 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B6AA7EF4276F647B00C09502 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		B6B8515627943E06007E9451 /* EventDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventDataModel.xcdatamodel; sourceTree = "<group>"; };
+		B6B8F4DB279AF238004CCD77 /* Categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
+		B6B8F4DD279AFBF2004CCD77 /* SupportCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCategoriesViewModel.swift; sourceTree = "<group>"; };
 		B6BE82B72794760D0059D26B /* CDDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDataManager.swift; sourceTree = "<group>"; };
 		B6BE82C7279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPhoneNumber+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B6BE82C8279480AA0059D26B /* CDPhoneNumber+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPhoneNumber+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				B6AA7EE5276CC07400C09502 /* Data.json */,
+				B6B8F4DB279AF238004CCD77 /* Categories.json */,
 			);
 			path = "Data Jsons";
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				B6DFFC8C275D006A0096A109 /* SupportCategoriesCollectionViewCell.xib */,
 				B6DFFC8B275D006A0096A109 /* SupportCategoriesCollectionViewCell.swift */,
 				B69180692747E81C00E2ED92 /* ViewController.swift */,
+				B6B8F4DD279AFBF2004CCD77 /* SupportCategoriesViewModel.swift */,
 				B6DFFC8F275D0B940096A109 /* Categories.swift */,
 			);
 			path = SupportViewController;
@@ -388,6 +394,7 @@
 				B6AA7EE6276CC07400C09502 /* Data.json in Resources */,
 				B691806D2747E81C00E2ED92 /* Main.storyboard in Resources */,
 				B6DFFC8E275D006A0096A109 /* SupportCategoriesCollectionViewCell.xib in Resources */,
+				B6B8F4DC279AF238004CCD77 /* Categories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +479,7 @@
 				B6769C0C2774E292000B3D98 /* ItemView.swift in Sources */,
 				B6BE82B82794760D0059D26B /* CDDataManager.swift in Sources */,
 				B6AA7EF1276F643200C09502 /* DetailViewController.swift in Sources */,
+				B6B8F4DE279AFBF2004CCD77 /* SupportCategoriesViewModel.swift in Sources */,
 				B6D15CDB2767B6A5006A89BC /* EventsViewController.swift in Sources */,
 				B6BE82DE2795AB120059D26B /* CDEvent+CoreDataProperties.swift in Sources */,
 				B6AA7EBC276A114F00C09502 /* EventModel.swift in Sources */,

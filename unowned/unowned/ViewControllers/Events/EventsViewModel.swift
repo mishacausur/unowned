@@ -23,7 +23,6 @@ class EventsViewModel: EventsViewOutput {
     let queue = DispatchQueue(label: "background", qos: .background, attributes: .concurrent)
     func getData() {
         DispatchQueue.main.async {
-//            sleep(2)
             let CDPosts = self.readDataFromDB()
             let posts = DataManager.shared.mapData(CDPosts)
             self.viewInput?.configureTableView(posts: posts)
