@@ -7,9 +7,7 @@
 
 import Foundation
 
-protocol DetailViewInput: AnyObject {
-    
-}
+protocol DetailViewInput: AnyObject {}
 
 protocol DetailViewOutput: Coordinating {
     var viewInput: DetailViewInput? { get set }

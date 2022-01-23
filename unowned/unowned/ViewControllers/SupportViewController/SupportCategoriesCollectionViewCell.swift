@@ -18,8 +18,22 @@ class SupportCategoriesCollectionViewCell: UICollectionViewCell {
         contentView.backgroundColor = UIColor(named: "lightGreyTwo")
     }
 
-    func configureView(_ category: Categories) {
-        iconImage.image = category.icon
-        label.text = category.label
+    func configureView(_ category: String) {
+        label.text = category
+        switch category {
+        case "Дети":
+            iconImage.image = UIImage(named: "childIcon")!
+        case "Взрослые":
+            iconImage.image = UIImage(named: "adultIcon")!
+        case "Пожилые":
+            iconImage.image = UIImage(named: "agedIcon")!
+        case "Животные":
+            iconImage.image = UIImage(named: "animalsIcon")!
+        case "Мероприятия":
+            iconImage.image = UIImage(named: "eventsIcon")!
+        default:
+            break
+        }
     }
 }
+

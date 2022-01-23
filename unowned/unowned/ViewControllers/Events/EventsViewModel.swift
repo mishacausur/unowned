@@ -22,13 +22,14 @@ class EventsViewModel: EventsViewOutput {
     var events: [EventModel]?
     let queue = DispatchQueue(label: "background", qos: .background, attributes: .concurrent)
     func getData() {
-        queue.sync {
-            DataManager.shared.getData { events in
-                DispatchQueue.main.async {
-                    self.events = events
-                    self.viewInput?.configureTableView(posts: events)
-                }
-            }
+        DispatchQueue.main.async {
+            let CDPosts = self.readDataFromDB()
+            let posts = DataManager.shared.mapData(CDPosts)
+            self.viewInput?.configureTableView(posts: posts)
         }
+    }
+    func readDataFromDB() -> [CDEvent] {
+        let events = CoreDataManager.shared.CDgetData()
+        return events
     }
 }

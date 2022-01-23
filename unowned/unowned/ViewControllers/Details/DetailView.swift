@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 class DetailView: UIView {
-    
     var event: EventModel
-    
     private let scrollView = UIScrollView(frame: .zero)
     private let titleLabel: UILabel = {
         let label = UILabel()

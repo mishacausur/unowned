@@ -38,8 +38,6 @@ class PhotosView: UIView {
     }
     private func configureViews() {
         self.addSubviews(photo1, photo2, photo3)
-        let width1 = (self.frame.width / 3) * 2
-        let width2 = (self.frame.width / 3) - 10
         let constraints = [
             photo1.topAnchor.constraint(equalTo: self.topAnchor),
             photo1.widthAnchor.constraint(equalToConstant: 222),
@@ -54,7 +52,6 @@ class PhotosView: UIView {
             photo3.leadingAnchor.constraint(equalTo: photo1.trailingAnchor, constant: 10),
             photo3.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             photo3.bottomAnchor.constraint(equalTo: photo1.bottomAnchor)]
-        
         NSLayoutConstraint.activate(constraints)
     }
 

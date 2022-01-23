@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 class EventsView: UIView {
-    
     var completion: ((EventModel) -> Void)?
-    
     let segmentController: UISegmentedControl = {
         let items = ["Текущие", "Завершенные"]
         let control = UISegmentedControl(items: items)

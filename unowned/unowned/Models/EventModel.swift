@@ -9,7 +9,7 @@ import Foundation
 
 struct EventModel: Codable {
     let id: String
-    let category: Category
+    let category: CategoryAPI
     let name, welcomeDescription: String
     let startDate, endDate: Int
     let address: String

@@ -16,7 +16,6 @@ enum Color {
     case grey
     case charcoalGrey
     case warmGrey
-    
     static func color(_ color: Color) -> UIColor {
         switch color {
         case .leaf:
@@ -39,7 +38,6 @@ enum Color {
 
 enum Font {
     case extrabold
-    
     static func setFont(_ font: Font, _ size: CGFloat) -> UIFont {
         switch font {
         case .extrabold:

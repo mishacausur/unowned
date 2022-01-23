@@ -10,7 +10,6 @@ import UIKit
 struct Item {
     let image: String
     let label: String
-    
     static let items: [Item] = [Item(image: "shirt", label: "Помочь вещами"),
                                 Item(image: "hands", label: "Стать волонтером"),
                                 Item(image: "tools", label: "Проф. помощь"),
@@ -18,7 +17,6 @@ struct Item {
 }
 
 class ItemView: UIView {
-    
     private let icon: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -51,12 +49,10 @@ class ItemView: UIView {
             icon.widthAnchor.constraint(equalToConstant: 22),
             icon.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             icon.bottomAnchor.constraint(equalTo: self.centerYAnchor),
-        
             label.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 9),
             label.centerXAnchor.constraint(equalTo: icon.centerXAnchor),
             label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 13.5),
             label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -13.5)]
-        
         NSLayoutConstraint.activate(constraints)
     }
 
