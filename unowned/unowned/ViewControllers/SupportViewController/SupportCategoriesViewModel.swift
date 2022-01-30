@@ -44,7 +44,6 @@ class SupportCategoriesViewModel: SupportViewOutput {
         DataManager.shared.getData { [weak self] events in
             DispatchQueue.main.async {
                 self?.saveDataToDB(events)
-                print(events)
             }
         }
     }

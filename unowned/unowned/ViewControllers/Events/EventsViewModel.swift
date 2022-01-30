@@ -23,9 +23,12 @@ class EventsViewModel: EventsViewOutput {
     let queue = DispatchQueue(label: "background", qos: .background, attributes: .concurrent)
     func getData() {
         DispatchQueue.main.async {
-            let CDPosts = self.readDataFromDB()
-            let posts = DataManager.shared.mapData(CDPosts)
-            self.viewInput?.configureTableView(posts: posts)
+            let models = FirebaseManager.shared.getData { [weak self] posts in
+                self?.viewInput?.configureTableView(posts: posts)
+            }
+//            let CDPosts = self.readDataFromDB()
+//            let posts = DataManager.shared.mapData(CDPosts)
+//            self.viewInput?.configureTableView(posts: posts)
         }
     }
     func readDataFromDB() -> [CDEvent] {

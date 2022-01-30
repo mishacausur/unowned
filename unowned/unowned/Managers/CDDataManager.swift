@@ -143,7 +143,6 @@ class CoreDataManager {
 //        fetch.predicate = predicate
         do {
             let item = try backgroundContext.fetch(fetch)
-            print(item)
             return item
         } catch {
             fatalError()

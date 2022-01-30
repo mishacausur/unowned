@@ -6,6 +6,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.barTintColor = UIColor.init(named: "leaf")
         let font = Font.setFont(.extrabold, 21)
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: font]
+        FirebaseApp.configure()
         return true
     }
     
