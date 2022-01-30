@@ -21,16 +21,34 @@ class EventsViewModel: EventsViewOutput {
     weak var viewInput: EventsViewInput?
     var events: [EventModel]?
     let queue = DispatchQueue(label: "background", qos: .background, attributes: .concurrent)
+// MARK: - получение данных с помощью Alamofire
     func getData() {
-        DispatchQueue.main.async {
-            let models = FirebaseManager.shared.getData { [weak self] posts in
-                self?.viewInput?.configureTableView(posts: posts)
+        queue.async {
+            AlamofireManager.shared.getData { [weak self] posts in
+                DispatchQueue.main.async {
+                    self?.viewInput?.configureTableView(posts: posts)
+                }
             }
+        }
+    }
+// MARK: - получение данные с помощью URLSession
+//    func getData() {
+//        queue.async {
+//            let models = FirebaseManager.shared.getData { [weak self] posts in
+//                DispatchQueue.main.async {
+//                    self?.viewInput?.configureTableView(posts: posts)
+//                }
+//            }
+//        }
+//    }
+// MARK: - получение данных из CoreData
+//    func getData() {
+//        DispatchQueue.main.async {
 //            let CDPosts = self.readDataFromDB()
 //            let posts = DataManager.shared.mapData(CDPosts)
 //            self.viewInput?.configureTableView(posts: posts)
-        }
-    }
+//        }
+//    }
     func readDataFromDB() -> [CDEvent] {
         let events = CoreDataManager.shared.CDgetData()
         return events

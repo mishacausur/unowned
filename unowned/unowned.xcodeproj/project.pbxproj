@@ -25,6 +25,8 @@
 		B699FCB927A6A51400D20B7C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B699FCB827A6A51400D20B7C /* FirebaseFirestore */; };
 		B699FCBB27A6A51400D20B7C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B699FCBA27A6A51400D20B7C /* FirebaseStorage */; };
 		B699FCBD27A6A6AB00D20B7C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699FCBC27A6A6AA00D20B7C /* FirebaseManager.swift */; };
+		B699FCC027A6D58800D20B7C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B699FCBF27A6D58800D20B7C /* Alamofire */; };
+		B699FCC227A6D5A600D20B7C /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699FCC127A6D5A600D20B7C /* AlamofireManager.swift */; };
 		B6AA7EBC276A114F00C09502 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA7EBB276A114F00C09502 /* EventModel.swift */; };
 		B6AA7EBE276A11A400C09502 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA7EBD276A11A400C09502 /* CategoriesModel.swift */; };
 		B6AA7EE6276CC07400C09502 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = B6AA7EE5276CC07400C09502 /* Data.json */; };
@@ -81,6 +83,7 @@
 		B69180732747E81D00E2ED92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B699FCB327A6A3D800D20B7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B699FCBC27A6A6AA00D20B7C /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		B699FCC127A6D5A600D20B7C /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		B6AA7EBB276A114F00C09502 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		B6AA7EBD276A11A400C09502 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		B6AA7EE5276CC07400C09502 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B699FCC027A6D58800D20B7C /* Alamofire in Frameworks */,
 				B699FCB727A6A51400D20B7C /* FirebaseDatabase in Frameworks */,
 				B699FCBB27A6A51400D20B7C /* FirebaseStorage in Frameworks */,
 				345FB558C38356D3F9E37C00 /* Pods_unowned.framework in Frameworks */,
@@ -237,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				B699FCBC27A6A6AA00D20B7C /* FirebaseManager.swift */,
+				B699FCC127A6D5A600D20B7C /* AlamofireManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				B699FCB627A6A51400D20B7C /* FirebaseDatabase */,
 				B699FCB827A6A51400D20B7C /* FirebaseFirestore */,
 				B699FCBA27A6A51400D20B7C /* FirebaseStorage */,
+				B699FCBF27A6D58800D20B7C /* Alamofire */,
 			);
 			productName = unowned;
 			productReference = B69180622747E81C00E2ED92 /* unowned.app */;
@@ -401,6 +407,7 @@
 			mainGroup = B69180592747E81C00E2ED92;
 			packageReferences = (
 				B699FCB527A6A51400D20B7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B699FCBE27A6D58800D20B7C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = B69180632747E81C00E2ED92 /* Products */;
 			projectDirPath = "";
@@ -522,6 +529,7 @@
 				B6DFFC8D275D006A0096A109 /* SupportCategoriesCollectionViewCell.swift in Sources */,
 				B6B8515727943E06007E9451 /* EventDataModel.xcdatamodeld in Sources */,
 				B6AA7EE8276CC36600C09502 /* PhoneNumber.swift in Sources */,
+				B699FCC227A6D5A600D20B7C /* AlamofireManager.swift in Sources */,
 				B6D15CDD2767B6C1006A89BC /* Extensions.swift in Sources */,
 				B6769C0E2774F283000B3D98 /* FacesLikes.swift in Sources */,
 				B6D15CD92767B694006A89BC /* EventsViewModel.swift in Sources */,
@@ -766,6 +774,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		B699FCBE27A6D58800D20B7C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -783,6 +799,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B699FCB527A6A51400D20B7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		B699FCBF27A6D58800D20B7C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B699FCBE27A6D58800D20B7C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
