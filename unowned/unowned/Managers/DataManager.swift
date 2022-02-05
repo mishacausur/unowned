@@ -85,4 +85,17 @@ class DataManager {
         }
        return items
     }
+    
+    func castCDCategoriesToStrings() -> [CategoryAPI] {
+        var array: [CategoryAPI] = []
+        let items = CoreDataManager.shared.CDgetCategoriesForData()
+        for item in items {
+            if let jtem = item.name {
+                let name = String("\(jtem)")
+                let category = CategoryAPI(name: name)
+                array.append(category)
+            }
+        }
+        return array.sorted { $0 < $1 }
+    }
 }

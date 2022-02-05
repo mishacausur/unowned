@@ -10,3 +10,11 @@ import Foundation
 struct CategoryAPI: Codable {
     let name: String
 }
+
+extension CategoryAPI: Comparable {
+    static func < (lhs: CategoryAPI, rhs: CategoryAPI) -> Bool {
+        lhs.name < rhs.name
+    }
+    
+    
+}
