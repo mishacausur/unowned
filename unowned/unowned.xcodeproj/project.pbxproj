@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		345FB558C38356D3F9E37C00 /* Pods_unowned.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D486272EE1F8AD7F8BD6A /* Pods_unowned.framework */; };
+		B619452127AFE2850048BFEB /* ULRLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B619452027AFE2850048BFEB /* ULRLinks.swift */; };
 		B6769C08277360A4000B3D98 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6769C07277360A4000B3D98 /* ContactsView.swift */; };
 		B6769C0A27736466000B3D98 /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6769C0927736466000B3D98 /* PhotosView.swift */; };
 		B6769C0C2774E292000B3D98 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6769C0B2774E292000B3D98 /* ItemView.swift */; };
@@ -66,6 +67,7 @@
 		17FC2BC0276306D6D8C37AD1 /* Pods-unowned.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unowned.release.xcconfig"; path = "Target Support Files/Pods-unowned/Pods-unowned.release.xcconfig"; sourceTree = "<group>"; };
 		355D486272EE1F8AD7F8BD6A /* Pods_unowned.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unowned.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4555A9BC2D5DF9BF37758FB9 /* Pods-unowned.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unowned.debug.xcconfig"; path = "Target Support Files/Pods-unowned/Pods-unowned.debug.xcconfig"; sourceTree = "<group>"; };
+		B619452027AFE2850048BFEB /* ULRLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULRLinks.swift; sourceTree = "<group>"; };
 		B62BADFF275CDC6B00AE3E41 /* unowned */ = {isa = PBXFileReference; lastKnownFileType = folder; path = unowned; sourceTree = "<group>"; };
 		B6769C07277360A4000B3D98 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		B6769C0927736466000B3D98 /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				B699FCBC27A6A6AA00D20B7C /* FirebaseManager.swift */,
 				B699FCC127A6D5A600D20B7C /* AlamofireManager.swift */,
+				B619452027AFE2850048BFEB /* ULRLinks.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				B6BE82DE2795AB120059D26B /* CDEvent+CoreDataProperties.swift in Sources */,
 				B6AA7EBC276A114F00C09502 /* EventModel.swift in Sources */,
 				B6D15CE82767BCAF006A89BC /* Settings.swift in Sources */,
+				B619452127AFE2850048BFEB /* ULRLinks.swift in Sources */,
 				B6AA7EF5276F647B00C09502 /* DetailViewModel.swift in Sources */,
 				B6BE82CD279480AA0059D26B /* CDPhoneNumber+CoreDataClass.swift in Sources */,
 				B6D15CDF2767B7F6006A89BC /* Coordinator.swift in Sources */,

@@ -36,7 +36,14 @@ class SupportCategoriesViewModel: SupportViewOutput {
     }
 // MARK: - Получение категорий через URLSession
     func getCats() {
+        // получаем данные через URLSession
         FirebaseManager.shared.getCategories { [weak self] categories in
+            let cats = self?.castCategories(categories)
+            self?.viewInput?.categories = cats!
+            self?.viewInput?.reload()
+        }
+        // получаем данные через Alamofire
+        AlamofireManager.shared.getCategories { [weak self] categories in
             let cats = self?.castCategories(categories)
             self?.viewInput?.categories = cats!
             self?.viewInput?.reload()
