@@ -17,7 +17,6 @@ protocol SupportViewInput: AnyObject {
 protocol SupportViewOutput {
     var viewInput: SupportViewInput? { get set }
     func firstData()
-//    func secondData()
     func saveData()
     func getCats()
 }

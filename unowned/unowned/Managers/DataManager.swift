@@ -9,6 +9,7 @@ import Foundation
 
 class DataManager {
     static let shared = DataManager()
+// MARK: - Получение событий из локального хранилища (файл json в бандле)
     func getData(completion: @escaping ([EventModel]) -> Void ) {
         if let path = Bundle.main.path(forResource: "Data", ofType: "json") {
             do {
@@ -30,6 +31,7 @@ class DataManager {
             print("data file doesn't found :(")
         }
     }
+// MARK: - Получение категорий из локального хранилища (файл json в бандле)
     func getCategoriesData(completion: @escaping ([CategoryAPI]) -> Void ) {
         if let path = Bundle.main.path(forResource: "Categories", ofType: "json") {
             do {
@@ -51,6 +53,7 @@ class DataManager {
             print("data file doesn't found :(")
         }
     }
+// MARK: - Преобразование массива событий CoreData в массив объектов данных
     func mapData(_ events: [CDEvent]) -> [EventModel] {
         var models: [EventModel] = []
         for event in events {
@@ -59,6 +62,7 @@ class DataManager {
         }
         return models.compactMap { $0 }
     }
+    // MARK: - Каст событмй из сущностей CoreData в структуру данных
     func castCDDataToModel(_ event: CDEvent) -> EventModel {
         if let address = event.address,
            let cat = event.category,
@@ -75,6 +79,7 @@ class DataManager {
             fatalError()
         }
     }
+    // MARK: - получение массива номеров телефонов из сущностей множества CoreData
     func getPhoneNumbers(_ event: CDEvent) -> [PhoneNumber] {
         var items: [PhoneNumber] = []
         guard let id = event.identify else { return [] }
@@ -85,7 +90,7 @@ class DataManager {
         }
        return items
     }
-    
+    // MARK: - получение массива категорий событий из CoreData
     func castCDCategoriesToStrings() -> [CategoryAPI] {
         var array: [CategoryAPI] = []
         let items = CoreDataManager.shared.CDgetCategoriesForData()
