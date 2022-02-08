@@ -58,6 +58,7 @@ extension ViewController: SupportViewInput {
     
     func reload() {
         DispatchQueue.main.async { [weak self] in
+            defer { withExtendedLifetime(self) {} }
             withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
                 self?.categoiesLabel.alpha = 1
                 self?.supportCategoriesCollectionView.reloadData()

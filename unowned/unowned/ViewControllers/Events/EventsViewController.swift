@@ -24,6 +24,7 @@ class EventsViewController: UIViewController, ViewControllerable {
         viewModel.viewInput = self
         self.navigationItem.hidesBackButton = true
         view().completion = { [weak self] event in
+            defer { withExtendedLifetime(self) {} }
             self?.viewModel.coordinator?.eventOccurred(with: .toDetail, with: event, nil)
         }
     }
@@ -36,6 +37,7 @@ class EventsViewController: UIViewController, ViewControllerable {
 extension EventsViewController: EventsViewInput {
     func configureTableView(posts: [EventModel]) {
         DispatchQueue.main.async { [weak self] in
+            defer { withExtendedLifetime(self) {} }
             self?.view().configureViews(posts)
         }
     }

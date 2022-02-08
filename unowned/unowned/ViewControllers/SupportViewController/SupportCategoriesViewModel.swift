@@ -37,12 +37,14 @@ class SupportCategoriesViewModel: SupportViewOutput {
     func getCats() {
         // получаем данные через URLSession
         FirebaseManager.shared.getCategories { [weak self] categories in
+            defer { withExtendedLifetime(self) {} }
             let cats = self?.castCategories(categories)
             self?.viewInput?.categories = cats!
             self?.viewInput?.reload()
         }
         // получаем данные через Alamofire
         AlamofireManager.shared.getCategories { [weak self] categories in
+            defer { withExtendedLifetime(self) {} }
             let cats = self?.castCategories(categories)
             self?.viewInput?.categories = cats!
             self?.viewInput?.reload()
@@ -55,6 +57,7 @@ class SupportCategoriesViewModel: SupportViewOutput {
             let queue = DispatchQueue.init(label: "datas", qos: .background, attributes: .concurrent)
             for item in category {
                 queue.async { [weak self] in
+                    defer { withExtendedLifetime(self) {} }
                     CoreDataManager.shared.saveCategories(item) {_ in
                         self?.viewInput?.reload()
                     }
@@ -65,6 +68,7 @@ class SupportCategoriesViewModel: SupportViewOutput {
 // MARK: - Загрузка событий из json файла и сохранение их в CoreData
     func saveData() {
         DataManager.shared.getData { [weak self] events in
+            defer { withExtendedLifetime(self) {} }
             DispatchQueue.main.async {
                 self?.saveDataToDB(events)
             }
