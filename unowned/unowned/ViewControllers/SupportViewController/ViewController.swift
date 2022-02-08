@@ -6,53 +6,28 @@
 // swiftlint:disable all
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
     
-    var categories: [String] = [] 
+    @IBOutlet var categoiesLabel: UILabel!
+    var categories: [String] = []
     
     private var viewModel: SupportViewOutput = SupportCategoriesViewModel()
-    
-    private let activity: UIActivityIndicatorView = {
-        let view = UIActivityIndicatorView()
-        view.hidesWhenStopped = true
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
     
     @IBOutlet private weak var supportCategoriesCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addActivityIndicator()
+        categoiesLabel.alpha = 0
         viewModel.viewInput = self
         supportCategoriesCollectionView.register(UINib(nibName: "SupportCategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "SupportCategoriesCollectionViewCell")
-        viewModel.firstData {
-            self.viewModel.secondData()
-        }
+        viewModel.firstData()
+        viewModel.getCats()
     }
     
     @IBAction private func closeApp(_ sender: Any) {
         exit(0)
-    }
-    
-    func getCategories() {
-        var array: [String] = []
-        let items = CoreDataManager.shared.CDgetCategoriesForData()
-        for i in items {
-            if let j = i.name {
-                let name = String("\(j)")
-                array.append(name)
-            }
-            
-        }
-        categories = array.sorted { $0 < $1 }
-    }
-    private func addActivityIndicator() {
-        view.addSubview(activity)
-        activity.startAnimating()
-        [activity.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-         activity.centerYAnchor.constraint(equalTo: view.centerYAnchor)].forEach { $0.isActive = true }
     }
 }
 
@@ -80,10 +55,14 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
 }
 
 extension ViewController: SupportViewInput {
+    
     func reload() {
         DispatchQueue.main.async { [weak self] in
-            self?.activity.stopAnimating()
-            self?.supportCategoriesCollectionView.reloadData()
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+                self?.categoiesLabel.alpha = 1
+                self?.supportCategoriesCollectionView.reloadData()
+            }
+           
         }
     }
 }
